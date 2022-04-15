@@ -1,6 +1,6 @@
-public interface TreeVisitor<T,R> {
-    R visit(Leaf<T> l);
-    R visit(Node<T> n);    
+public interface TreeVisitor<T,R,A> {
+    R visit(Leaf<T> l, A acc);
+    R visit(Node<T> n, A acc);    
     // R visit(Tree<T> t);
 
 }   

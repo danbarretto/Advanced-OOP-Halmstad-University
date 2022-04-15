@@ -69,8 +69,8 @@ public class Node<T> implements Tree<T> {
         return show(0);
     }*/
     @Override
-    public <R> R accept(TreeVisitor<T, R> visitor) {
-        return visitor.visit(this);
+    public <R,A> R accept(TreeVisitor<T, R, A> visitor, A acc) {
+        return visitor.visit(this, acc);
     }
     
 }

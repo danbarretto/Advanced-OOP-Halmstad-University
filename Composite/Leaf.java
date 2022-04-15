@@ -48,7 +48,7 @@ public class Leaf<T> implements Tree<T> {
     */
 
     @Override
-    public <R> R accept(TreeVisitor<T, R> visitor) {
-        return visitor.visit(this);
+    public <R, A> R accept(TreeVisitor<T, R, A> visitor, A acc) {
+        return visitor.visit(this, acc);
     }
 }

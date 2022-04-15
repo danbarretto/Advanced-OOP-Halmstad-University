@@ -6,5 +6,5 @@ public interface Tree<T> {
     // int nrOfValues();
     // String show(int level);
     T getValue();
-    <R> R accept(TreeVisitor<T,R> visitor);
+    <R, A> R accept(TreeVisitor<T,R,A> visitor, A acc);
 }
