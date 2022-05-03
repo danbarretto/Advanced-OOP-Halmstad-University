@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-@Element(name="node")
+@Element(name="basket")
 public class Test {
     
     private String value;
@@ -17,12 +17,12 @@ public class Test {
         children = new ArrayList<>();
     }
 
-    @ElementField(name="value")
+    @ElementField(name="fruit")
     public String getValue(){
         return value;
     }
 
-    @SubElements(name="child")
+    @SubElements(name="sub-basket")
     public List<Test> getChildren(){
         return children;
     }

@@ -5,11 +5,7 @@ public class XMLTreePrinter<T> implements TreeVisitor<T, String, Integer>{
 
     @Override
     public String visit(Leaf<T> l, Integer level) {
-        String indent = "";
-        for (int i = 0; i < level; i++) {
-            indent += "\t";
-            // indent += " ";
-        }
+        String indent = createIndent(level);
         return indent + "<"+l.getNodeName()+" "+l.getFieldName()+"=\""+l.getValue().toString()+"\"/>";
     }
 
